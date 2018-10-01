@@ -27,3 +27,25 @@
 .node--leaf {
   pointer-events: none;
 }
+
+.edit-button {
+  border: 1px solid gray;
+  border-radius: 290486px;
+  color: gray;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.edit-button:hover {
+  background: gray;
+  color: white;
+}

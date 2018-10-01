@@ -31,7 +31,7 @@ const titleGroup = svg
 
 const titleRect = titleGroup
   .append("rect")
-  .style("fill", "lightskyblue")
+  .style("fill", "lightgray")
   .style("display", "inline");
 
 const titleText = titleGroup.append("text").attr("class", "label");

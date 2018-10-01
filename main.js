@@ -4,6 +4,7 @@ const key = window.location.hash.substr(1) || defaultKey;
 const yaml = readYamlFromGist(key);
 const data = yamlRootToData(yaml);
 draw(data);
+renderEditButton(key);
 
 function readYamlFromGist(key) {
   const gist = new XMLHttpRequest();
@@ -44,4 +45,14 @@ function yamlToData(content, name) {
     result.size = 1;
   }
   return result;
+}
+
+function renderEditButton(key) {
+  const linkToGist = document.createElement("a");
+  linkToGist.href = "https://gist.github.com/" + key;
+  linkToGist.target = "_blank";
+  linkToGist.className = "edit-button";
+  const linkToSpreadsheetText = document.createTextNode("Edit");
+  linkToGist.appendChild(linkToSpreadsheetText);
+  document.body.appendChild(linkToGist);
 }
